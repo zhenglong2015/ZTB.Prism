@@ -1,0 +1,49 @@
+﻿<controls:BaseWindow
+    x:Class="ZTB.Prism.UI.Views.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="clr-namespace:ZTB.Prism.Controls.CustomControls;assembly=ZTB.Prism.Controls"
+    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+    xmlns:prism="http://prismlibrary.com/"
+    xmlns:views="clr-namespace:ZTB.Prism.UI.Views"
+    Title="{Binding Title}"
+    Width="525"
+    Height="350"
+    prism:ViewModelLocator.AutoWireViewModel="True">
+    <i:Interaction.Triggers>
+        <prism:InteractionRequestTrigger SourceObject="{Binding NotificationRequest}">
+            <prism:PopupWindowAction CenterOverAssociatedObject="True" IsModal="True" />
+        </prism:InteractionRequestTrigger>
+        <prism:InteractionRequestTrigger SourceObject="{Binding ConfirmationRequest}">
+            <prism:PopupWindowAction CenterOverAssociatedObject="True" IsModal="True" />
+        </prism:InteractionRequestTrigger>
+
+        <!--<prism:InteractionRequestTrigger SourceObject="{Binding CustomNotificationRequest}">
+            <prism:PopupWindowAction CenterOverAssociatedObject="True" IsModal="True">
+                <prism:PopupWindowAction.WindowContent>
+                    <views:NotificatyControl />
+                </prism:PopupWindowAction.WindowContent>
+            </prism:PopupWindowAction>
+        </prism:InteractionRequestTrigger>-->
+
+    </i:Interaction.Triggers>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <WrapPanel>
+            <Button Command="{Binding NotificationCommand}">提示框</Button>
+            <Button Command="{Binding ConfirmationCommand}">确认框</Button>
+            <Button Command="{Binding CustomNotificationCommand}">自定义提示框</Button>
+
+            <Button Command="{Binding NavigateCommand}" CommandParameter="BaseInformationStart">基础信息录入</Button>
+            <Button Command="{Binding NavigateCommand}" CommandParameter="EnergyConsumptionStart">用能测设计</Button>
+            <Button Command="{Binding NavigateCommand}" CommandParameter="BaseInformationStart">功能测设计</Button>
+        </WrapPanel>
+        <ContentControl Grid.Row="2" prism:RegionManager.RegionName="MainRegion" />
+
+        <ContentControl Grid.RowSpan="3" prism:RegionManager.RegionName="LoginRegion" />
+    </Grid>
+</controls:BaseWindow>

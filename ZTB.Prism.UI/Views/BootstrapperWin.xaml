@@ -1,0 +1,13 @@
+﻿<control:BaseWindow
+    x:Class="ZTB.Prism.UI.Views.BootstrapperWin"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:control="clr-namespace:ZTB.Prism.Controls.CustomControls;assembly=ZTB.Prism.Controls"
+    xmlns:prism="http://prismlibrary.com/"
+    Title="少林扫地曾的Prism项目"
+    prism:ViewModelLocator.AutoWireViewModel="True"
+    Icon="pack://application:,,,/ZTB.Prism.Resources;component/logo.png">
+    <Grid>
+        <ContentControl prism:RegionManager.RegionName="LoginRegion" />
+    </Grid>
+</control:BaseWindow>
