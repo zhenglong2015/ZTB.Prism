@@ -11,6 +11,7 @@ namespace ZTB.Prism.UI.Login
 {
     public class LoginMoudle : IModule
     {
+        //测试提交
         private readonly IRegionViewRegistry regionViewRegistry;
         public LoginMoudle(IRegionViewRegistry registry)
         {
