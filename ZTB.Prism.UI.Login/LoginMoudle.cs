@@ -12,6 +12,7 @@ namespace ZTB.Prism.UI.Login
     public class LoginMoudle : IModule
     {
         private readonly IRegionViewRegistry regionViewRegistry;
+
         public LoginMoudle(IRegionViewRegistry registry)
         {
             this.regionViewRegistry = registry;
