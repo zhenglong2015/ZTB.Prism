@@ -1,8 +1,9 @@
-﻿<Application x:Class="ZTB.Prism.UI.App"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:ZTB.Prism.UI">
+﻿<Application
+    x:Class="ZTB.Prism.UI.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:ZTB.Prism.UI">
     <Application.Resources>
-        <ResourceDictionary Source="pack://application:,,,/ZTB.Prism.Styles;component/Index.xaml"></ResourceDictionary>
+        <ResourceDictionary Source="pack://application:,,,/ZTB.Prism.Styles;component/Index.xaml" />
     </Application.Resources>
 </Application>

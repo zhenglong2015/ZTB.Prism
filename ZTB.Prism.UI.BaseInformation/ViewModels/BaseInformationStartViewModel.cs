@@ -33,7 +33,7 @@ namespace ZTB.Prism.UI.BaseInformation.ViewModels
         /// <param name="navigationContext"></param>
         public void OnNavigatedTo(NavigationContext navigationContext)
         {
-            var pars = navigationContext.Parameters["测试"].ToString();
+           // var pars = navigationContext.Parameters["测试"].ToString();
         }
 
         public bool IsNavigationTarget(NavigationContext navigationContext)

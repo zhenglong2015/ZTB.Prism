@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using ZTB.Prism.Controls.Helpers;
 
 namespace ZTB.Prism.UI.Login.ViewModels
 {
@@ -40,12 +41,15 @@ namespace ZTB.Prism.UI.Login.ViewModels
             LoginCommand = new DelegateCommand(() =>
             {
                 regionManager.RequestNavigate("LoginRegion", "BaseInformationStart");
-            }, ()=> { return !string.IsNullOrWhiteSpace(UserName) && !string.IsNullOrWhiteSpace(PassWord); });
+            }, () => { return !string.IsNullOrWhiteSpace(UserName) && !string.IsNullOrWhiteSpace(PassWord); });
 
             ExitCommand = new DelegateCommand(() =>
             {
-                //TODO 确认提示框
-                Application.Current.Shutdown();
+                ShowMesHelper.InputWin("输入面积", "面积", "1");
+                if (ShowMesHelper.Question("确认退出程序?", "确认消息"))
+                {
+                    Application.Current.Shutdown();
+                }
             });
         }
     }

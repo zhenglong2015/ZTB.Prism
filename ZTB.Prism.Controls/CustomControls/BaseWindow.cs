@@ -59,7 +59,6 @@ namespace ZTB.Prism.Controls.CustomControls
         private void CloseWindow(object sender, ExecutedRoutedEventArgs e)
         {
             this.Close();
-            //SystemCommands.CloseWindow(this);
         }
 
         private void MaximizeWindow(object sender, ExecutedRoutedEventArgs e)
@@ -80,14 +79,14 @@ namespace ZTB.Prism.Controls.CustomControls
 
         private void ShowSystemMenu(object sender, ExecutedRoutedEventArgs e)
         {
-            //var element = e.OriginalSource as FrameworkElement;
-            //if (element == null)
-            //    return;
+            var element = e.OriginalSource as FrameworkElement;
+            if (element == null)
+                return;
 
-            //var point = WindowState == WindowState.Maximized ? new Point(0, element.ActualHeight)
-            //    : new Point(Left + BorderThickness.Left, element.ActualHeight + Top + BorderThickness.Top);
-            //point = element.TransformToAncestor(this).Transform(point);
-            //SystemCommands.ShowSystemMenu(this, point);
+            var point = WindowState == WindowState.Maximized ? new Point(0, element.ActualHeight)
+                : new Point(Left + BorderThickness.Left, element.ActualHeight + Top + BorderThickness.Top);
+            point = element.TransformToAncestor(this).Transform(point);
+            SystemCommands.ShowSystemMenu(this, point);
         }
 
         #endregion

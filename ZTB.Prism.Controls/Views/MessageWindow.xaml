@@ -1,0 +1,42 @@
+﻿<local:BaseWindow
+    x:Class="ZTB.Prism.Controls.MessageWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:ZTB.Prism.Controls.CustomControls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    x:Name="messageWindow"
+    Title="{Binding CustomTitle, ElementName=messageWindow}"
+    Height="{Binding ElementName=messageWindow, Path=SetHeight}"
+    MinWidth="300"
+    ResizeMode="NoResize"
+    SizeToContent="Width">
+    <local:BaseWindow.Resources>
+        <DataTemplate x:Key="messageDataTemplate">
+            <TextBlock Text="{Binding}" />
+        </DataTemplate>
+    </local:BaseWindow.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="45" />
+        </Grid.RowDefinitions>
+        <ItemsControl
+            Grid.Row="1"
+            Margin="20,0,20,0"
+            ItemTemplate="{StaticResource messageDataTemplate}"
+            ItemsSource="{Binding Messages, ElementName=messageWindow}" />
+
+        <Button
+            Grid.Row="3"
+            Width="70"
+            Height="25"
+            Margin="10,0,10,20"
+            HorizontalAlignment="Right"
+            Click="Button_Click"
+            Content="确 定"
+            IsDefault="True" />
+    </Grid>
+</local:BaseWindow>

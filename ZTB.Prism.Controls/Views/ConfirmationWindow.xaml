@@ -1,0 +1,45 @@
+﻿<local:BaseWindow
+    x:Class="ZTB.Prism.Controls.Views.ConfirmationWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:ZTB.Prism.Controls.CustomControls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    x:Name="confirmationWindow"
+    Title="{Binding CustomTitle, ElementName=confirmationWindow}"
+    Width="300"
+    MinHeight="120"
+    ResizeMode="NoResize"
+    SizeToContent="Height">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="45" />
+        </Grid.RowDefinitions>
+        <TextBlock
+            Grid.Row="1"
+            Margin="20,5,20,20"
+            Text="{Binding Messages, ElementName=confirmationWindow}" />
+        <Button
+            Grid.Row="3"
+            Width="70"
+            Height="25"
+            Margin="0,10,10,10"
+            HorizontalAlignment="Right"
+            Click="Button_Click"
+            Content="确 定"
+            IsDefault="True" />
+
+        <Button
+            Name="btnCancel"
+            Grid.Row="3"
+            Width="70"
+            Height="25"
+            Margin="20,10,90,10"
+            HorizontalAlignment="Right"
+            Click="btnCancel_Click"
+            Content="取 消" />
+    </Grid>
+</local:BaseWindow>
