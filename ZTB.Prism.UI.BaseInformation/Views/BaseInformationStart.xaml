@@ -8,6 +8,31 @@
     xmlns:prism="http://prismlibrary.com/"
     prism:ViewModelLocator.AutoWireViewModel="True">
     <Grid>
-        <TextBlock>基础信息录入</TextBlock>
+        <StackPanel Margin="12" Orientation="Horizontal">
+            <TextBlock
+                Foreground="Green"
+                Style="{StaticResource FontAwesome}"
+                Text="&#xf057;" />
+            <TextBlock
+                Foreground="Green"
+                Style="{StaticResource FontAwesome}"
+                Text="&#xf000;" />
+            <TextBlock
+                Foreground="Green"
+                Style="{StaticResource FontAwesome}"
+                Text="&#xf001;" />
+            <TextBlock
+                Foreground="Green"
+                Style="{StaticResource FontAwesome}"
+                Text="&#xf002;" />
+            <TextBlock
+                Foreground="Green"
+                Style="{StaticResource FontAwesome}"
+                Text="&#xf057;" />
+            <TextBlock
+                Foreground="Green"
+                Style="{StaticResource FontAwesome}"
+                Text="&#xf057;" />
+        </StackPanel>
     </Grid>
 </UserControl>
