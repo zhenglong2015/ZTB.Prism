@@ -48,7 +48,6 @@ namespace ZTB.Prism.UI.Login.ViewModels
 
             ExitCommand = new DelegateCommand(() =>
             {
-                ShowMesHelper.InputWin("输入面积", "面积", "1");
                 if (ShowMesHelper.Question("确认退出程序?", "确认消息"))
                 {
                     Application.Current.Shutdown();

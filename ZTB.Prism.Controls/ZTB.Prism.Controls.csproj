@@ -54,6 +54,8 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomControls\BaseButton.cs" />
+    <Compile Include="CustomControls\BaseImgButton.cs" />
     <Compile Include="CustomControls\BaseWindow.cs" />
     <Compile Include="Helpers\ShowMesHelper.cs" />
     <Compile Include="Views\ConfirmationWindow.xaml.cs">
