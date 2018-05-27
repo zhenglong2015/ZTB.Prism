@@ -1,4 +1,5 @@
 ﻿using Prism.Commands;
+using Prism.Logging;
 using Prism.Mvvm;
 using Prism.Regions;
 using System;
@@ -14,6 +15,7 @@ namespace ZTB.Prism.UI.Login.ViewModels
     public class LoginControlViewModel : BindableBase
     {
         private readonly IRegionManager regionManager;
+        private ILoggerFacade loggerFacade;
 
         private string userName = "Admin";
         public string UserName
@@ -34,9 +36,10 @@ namespace ZTB.Prism.UI.Login.ViewModels
         public DelegateCommand LoginCommand { get; set; }
         public DelegateCommand ExitCommand { get; private set; }
 
-        public LoginControlViewModel(IRegionManager regionManager)
+        public LoginControlViewModel(IRegionManager regionManager, ILoggerFacade loggerFacade)
         {
             this.regionManager = regionManager;
+            this.loggerFacade = loggerFacade;
 
             LoginCommand = new DelegateCommand(() =>
             {

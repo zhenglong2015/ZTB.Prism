@@ -1,4 +1,5 @@
 ﻿using Microsoft.Practices.Unity;
+using Prism.Logging;
 using Prism.Modularity;
 using Prism.Mvvm;
 using Prism.Unity;
@@ -9,6 +10,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using ZTB.Prism.Infrastructure;
 using ZTB.Prism.UI.BaseInformation;
 using ZTB.Prism.UI.BaseInformation.Views;
 using ZTB.Prism.UI.Core;
@@ -50,8 +52,14 @@ namespace ZTB.Prism.UI
             moduleCatalog.AddModule(typeof(BaseInformationModule));
             moduleCatalog.AddModule(typeof(EnergyConsumptionModule));
         }
-
-
+        /// <summary>
+        /// 自定义日志记录
+        /// </summary>
+        /// <returns></returns>
+        protected override ILoggerFacade CreateLogger()
+        {
+            return new LogHelper();
+        }
 
         //改变VMd的默认注册
         //protected override void ConfigureViewModelLocator()
