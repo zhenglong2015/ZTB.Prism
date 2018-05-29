@@ -1,7 +1,10 @@
 ﻿<ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="clr-namespace:ZTB.Prism.Controls.CustomControls;assembly=ZTB.Prism.Controls">
+    xmlns:controls="clr-namespace:ZTB.Prism.Controls.CustomControls;assembly=ZTB.Prism.Controls">
+
+
+
 
     <!--  圆角按钮开始  支持Icon  -->
     <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD" />
@@ -47,12 +50,10 @@
                 <TextBlock
                     x:Name="txtIcon"
                     Margin="5"
-                    FontSize="15"
+                    FontSize="30"
                     Foreground="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=Foreground}"
-                    RenderTransformOrigin="0.5,0.5"
                     Style="{DynamicResource FontAwesome}"
-                    Text="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=Icon}"
-                    Visibility="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=IconVisibility}" />
+                    Text="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=Icon}" />
 
                 <TextBlock
                     x:Name="txtContent"
@@ -64,31 +65,22 @@
             </StackPanel>
         </Border>
         <ControlTemplate.Triggers>
+            <DataTrigger Binding="{Binding Text, ElementName=txtIcon}" Value="">
+                <Setter TargetName="txtIcon" Property="Visibility" Value="Collapsed" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Text, ElementName=txtContent}" Value="">
+                <Setter TargetName="txtContent" Property="Visibility" Value="Collapsed" />
+            </DataTrigger>
+
             <Trigger Property="IsMouseOver" Value="true">
                 <Setter TargetName="border" Property="Background" Value="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=MouseOverBackground}" />
                 <Setter TargetName="txtIcon" Property="Foreground" Value="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=MouseOverForeground}" />
                 <Setter TargetName="txtContent" Property="Foreground" Value="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=MouseOverForeground}" />
             </Trigger>
-
-
-
-
-            <!--<Trigger Property="IsDefaulted" Value="true">
-                            <Setter TargetName="border" Property="BorderBrush" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" />
-                        </Trigger>-->
-
-            <!--<Trigger Property="IsPressed" Value="true">
-                            <Setter TargetName="border" Property="Background" Value="{StaticResource Button.Pressed.Background}" />
-                            <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource Button.Pressed.Border}" />
-                        </Trigger>
-                        <Trigger Property="IsEnabled" Value="false">
-                            <Setter TargetName="border" Property="Background" Value="{StaticResource Button.Disabled.Background}" />
-                            <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource Button.Disabled.Border}" />
-                        </Trigger>-->
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
-    <Style x:Key="DefautButtonStyle" TargetType="{x:Type local:BaseButton}">
+    <Style x:Key="DefautButtonStyle" TargetType="{x:Type controls:BaseButton}">
         <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}" />
         <Setter Property="Background" Value="{StaticResource Button.Static.Background}" />
         <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}" />
@@ -105,7 +97,7 @@
 
 
     <!--  LinkButton的FButton样式，默认无FIcon开始  -->
-    <Style x:Key="LinkButtonStyle" TargetType="{x:Type local:BaseButton}">
+    <Style x:Key="LinkButtonStyle" TargetType="{x:Type controls:BaseButton}">
         <Setter Property="Background" Value="Transparent" />
         <Setter Property="Foreground" Value="Transparent" />
         <Setter Property="BorderBrush" Value="Transparent" />
@@ -125,7 +117,7 @@
     <!--  LinkButton的FButton样式，默认无FIcon结束  -->
 
     <!--  图片按钮开始  -->
-    <Style x:Key="ImgButtonStyle" TargetType="{x:Type local:BaseImgButton}">
+    <Style x:Key="ImgButtonStyle" TargetType="{x:Type controls:BaseImgButton}">
         <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisualStyle}" />
         <Setter Property="Foreground" Value="#333333" />
         <Setter Property="BorderThickness" Value="0" />

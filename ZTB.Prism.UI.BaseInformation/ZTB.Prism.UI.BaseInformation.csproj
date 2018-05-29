@@ -103,6 +103,10 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ZTB.Prism.Controls\ZTB.Prism.Controls.csproj">
+      <Project>{edaba3dd-3598-4e78-b02e-108d1e8036e5}</Project>
+      <Name>ZTB.Prism.Controls</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ZTB.Prism.UI.Core\ZTB.Prism.UI.Core.csproj">
       <Project>{224632B7-7380-4DA1-B4B4-04A109C2D9B2}</Project>
       <Name>ZTB.Prism.UI.Core</Name>

@@ -56,7 +56,9 @@
   <ItemGroup>
     <Compile Include="CustomControls\BaseButton.cs" />
     <Compile Include="CustomControls\BaseImgButton.cs" />
+    <Compile Include="CustomControls\BaseTextBox.cs" />
     <Compile Include="CustomControls\BaseWindow.cs" />
+    <Compile Include="Helpers\ControlAttachProperty.cs" />
     <Compile Include="Helpers\ShowMesHelper.cs" />
     <Compile Include="Views\ConfirmationWindow.xaml.cs">
       <DependentUpon>ConfirmationWindow.xaml</DependentUpon>

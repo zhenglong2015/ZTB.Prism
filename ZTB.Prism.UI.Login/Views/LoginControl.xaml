@@ -96,14 +96,12 @@
                         Height="28"
                         Margin="0,0,8,0"
                         Command="{Binding LoginCommand}"
-                        Content="登 陆"
                         CornerRadius="0"
                         FontSize="14"
                         Foreground="#ffffff"
                         Icon="&#xf00c;"
-                        IconVisibility="Collapsed"
                         IsDefault="True"
-                        Style="{StaticResource LinkButtonStyle}" />-->
+                        Style="{StaticResource DefautButtonStyle}" />-->
                     <baseButton:BaseImgButton
                         Width="121"
                         Height="28"

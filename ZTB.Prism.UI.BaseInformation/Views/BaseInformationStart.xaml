@@ -2,37 +2,20 @@
     x:Class="ZTB.Prism.UI.BaseInformation.Views.BaseInformationStart"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="clr-namespace:ZTB.Prism.Controls.CustomControls;assembly=ZTB.Prism.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:ZTB.Prism.UI.BaseInformation.Views"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:prism="http://prismlibrary.com/"
     prism:ViewModelLocator.AutoWireViewModel="True">
-    <Grid>
-        <StackPanel Margin="12" Orientation="Horizontal">
-            <TextBlock
-                Foreground="Green"
-                Style="{StaticResource FontAwesome}"
-                Text="&#xf057;" />
-            <TextBlock
-                Foreground="Green"
-                Style="{StaticResource FontAwesome}"
-                Text="&#xf000;" />
-            <TextBlock
-                Foreground="Green"
-                Style="{StaticResource FontAwesome}"
-                Text="&#xf001;" />
-            <TextBlock
-                Foreground="Green"
-                Style="{StaticResource FontAwesome}"
-                Text="&#xf002;" />
-            <TextBlock
-                Foreground="Green"
-                Style="{StaticResource FontAwesome}"
-                Text="&#xf057;" />
-            <TextBlock
-                Foreground="Green"
-                Style="{StaticResource FontAwesome}"
-                Text="&#xf057;" />
-        </StackPanel>
-    </Grid>
+    <StackPanel>
+        <controls:BaseTextBox
+            Width="180"
+            Height="45"
+            Margin="10"
+            VerticalContentAlignment="Center"
+            AppendIcon="&#xf01a;"
+            Label="文件路径:"
+            Watermark="我是水印" />
+    </StackPanel>
 </UserControl>

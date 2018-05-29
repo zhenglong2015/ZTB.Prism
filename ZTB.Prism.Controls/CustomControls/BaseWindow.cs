@@ -19,7 +19,6 @@ namespace ZTB.Prism.Controls.CustomControls
     {
         public BaseWindow()
         {
-            this.Style = Application.Current.Resources["BaseWindowStyle"] as Style;
             //设置弹窗居中显示
             this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
 
