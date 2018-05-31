@@ -17,6 +17,7 @@ namespace ZTB.Prism.Controls.CustomControls
 {
     public class BaseButton : Button
     {
+
         public static readonly DependencyProperty IconProperty = DependencyProperty.Register("Icon", typeof(string), typeof(BaseButton), new PropertyMetadata(""));
         /// ICON图标代码
         /// </summary>
