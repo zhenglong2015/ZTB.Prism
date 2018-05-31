@@ -3,63 +3,6 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:controls="clr-namespace:ZTB.Prism.Controls.CustomControls;assembly=ZTB.Prism.Controls"
     xmlns:local="clr-namespace:ZTB.Prism.Controls.Helpers;assembly=ZTB.Prism.Controls">
-    <ImageBrush x:Key="loginBackImage" ImageSource="pack://application:,,,/ZTB.Prism.Resources;component/登陆文本框背景.png" />
-    <Style x:Key="loginUserTextBoxStyle" TargetType="{x:Type TextBox}">
-        <Setter Property="BorderBrush" Value="Transparent" />
-        <Setter Property="BorderThickness" Value="0" />
-        <Setter Property="HorizontalContentAlignment" Value="Left" />
-        <Setter Property="VerticalContentAlignment" Value="Center" />
-        <Setter Property="FontSize" Value="23" />
-        <Setter Property="FontFamily" Value="Normal" />
-        <Setter Property="FontFamily" Value="MicrosoftYaHei" />
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type TextBox}">
-                    <Border
-                        x:Name="border"
-                        Background="{StaticResource loginBackImage}"
-                        BorderBrush="{TemplateBinding BorderBrush}"
-                        BorderThickness="{TemplateBinding BorderThickness}">
-                        <ScrollViewer
-                            x:Name="PART_ContentHost"
-                            HorizontalAlignment="Left"
-                            VerticalAlignment="Center"
-                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
-                    </Border>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-
-    <Style x:Key="loginPwdTextBoxStyle" TargetType="{x:Type PasswordBox}">
-        <Setter Property="BorderBrush" Value="Transparent" />
-        <Setter Property="BorderThickness" Value="0" />
-        <Setter Property="HorizontalContentAlignment" Value="Left" />
-        <Setter Property="VerticalContentAlignment" Value="Center" />
-        <Setter Property="FontFamily" Value="Normal" />
-        <Setter Property="FontSize" Value="40" />
-        <Setter Property="FontFamily" Value="MicrosoftYaHei" />
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type PasswordBox}">
-                    <Border
-                        x:Name="border"
-                        Background="{StaticResource loginBackImage}"
-                        BorderBrush="{TemplateBinding BorderBrush}"
-                        BorderThickness="{TemplateBinding BorderThickness}">
-                        <ScrollViewer
-                            x:Name="PART_ContentHost"
-                            Margin="0,3,0,-3"
-                            HorizontalAlignment="Left"
-                            VerticalAlignment="Center"
-                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
-                    </Border>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-
-
 
     <SolidColorBrush x:Key="TextBox.Static.Border" Color="#FFABAdB3" />
     <SolidColorBrush x:Key="TextBox.MouseOver.Border" Color="#FF7EB4EA" />
@@ -84,7 +27,7 @@
                             Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
-                            CornerRadius="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=CornerRadius}"
+                            CornerRadius="{TemplateBinding local:ControlAttachProperty.CornerRadius}"
                             SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
                         <Grid x:Name="PART_InnerGrid">
                             <Grid.ColumnDefinitions>
@@ -103,7 +46,7 @@
                                     Margin="3"
                                     HorizontalAlignment="Right"
                                     VerticalAlignment="Center"
-                                    Text="{TemplateBinding Label}" />
+                                    Text="{TemplateBinding local:ControlAttachProperty.Label}" />
                             </Border>
                             <!--  内容区域  -->
                             <ScrollViewer
@@ -125,7 +68,7 @@
                                 Foreground="{TemplateBinding Foreground}"
                                 IsHitTestVisible="False"
                                 Opacity="0.55"
-                                Text="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=Watermark}"
+                                Text="{TemplateBinding local:ControlAttachProperty.Watermark}"
                                 Visibility="Collapsed" />
                             <!--  附加内容区域  -->
                             <Border
@@ -146,7 +89,6 @@
                                     Command="local:ControlAttachProperty.OpenFileCommand"
                                     CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type TextBox}}}"
                                     Content="{x:Null}"
-                                    CornerRadius="0"
                                     Cursor="Hand"
                                     FontSize="13"
                                     Icon="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=AppendIcon}"

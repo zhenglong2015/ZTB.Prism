@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:controls="clr-namespace:ZTB.Prism.Controls.CustomControls;assembly=ZTB.Prism.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:fjsx="clr-namespace:ZTB.Prism.Controls.Helpers;assembly=ZTB.Prism.Controls"
     xmlns:local="clr-namespace:ZTB.Prism.UI.BaseInformation.Views"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:prism="http://prismlibrary.com/"
@@ -14,8 +15,25 @@
             Height="45"
             Margin="10"
             VerticalContentAlignment="Center"
-            AppendIcon="&#xf01a;"
-            Label="文件路径:"
-            Watermark="我是水印" />
+            fjsx:ControlAttachProperty.Label="文件路径:"
+            fjsx:ControlAttachProperty.Watermark="我是水印"
+            AppendIcon="&#xf01a;" />
+        <!--<controls:BaseRichTextBox Width="180" Height="50">
+            <FlowDocument>
+                <Paragraph>
+                    <Hyperlink NavigateUri="https://github.com/MahApps/MahApps.Metro">
+                        <Run Text="Normal" />
+                    </Hyperlink>
+                    <LineBreak />
+                    <Run>yutuiuoiuyedfgoiuytddfg.</Run>
+                </Paragraph>
+            </FlowDocument>
+        </controls:BaseRichTextBox>-->
+        <PasswordBox
+            Width="80"
+            Height="30"
+            VerticalAlignment="Center"
+            VerticalContentAlignment="Center"
+            fjsx:ControlAttachProperty.CornerRadius="10,10,10,10" />
     </StackPanel>
 </UserControl>
