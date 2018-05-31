@@ -18,9 +18,6 @@ namespace ZTB.Prism.Controls.CustomControls
     
     public class BaseRichTextBox : RichTextBox
     {
-        public BaseRichTextBox()
-        {
-
-        }
+        
     }
 }
