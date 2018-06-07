@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ZTB.Prism.Controls.CustomControls
+namespace ZTB.Prism.Controls.CustomControls 
 {
     
     public class BaseRichTextBox : RichTextBox

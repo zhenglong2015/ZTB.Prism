@@ -140,10 +140,10 @@
             </Setter.Value>
         </Setter>
     </Style>
-    <Style TargetType="{x:Type controls:BaseWindow}">
+    <Style x:Key="baseWin" TargetType="{x:Type controls:BaseWindow}">
         <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.WindowTextBrushKey}}" />
         <Setter Property="Background" Value="#FFF1F1F1" />
-        <Setter Property="BorderBrush" Value="#2389AB" />
+        <Setter Property="BorderBrush" Value="#FF0874AA" />
         <Setter Property="BorderThickness" Value="1" />
         <Setter Property="IsTabStop" Value="False" />
         <Setter Property="ResizeMode" Value="CanResizeWithGrip" />
