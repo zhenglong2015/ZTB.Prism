@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CustomControls\BaseButton.cs" />
+    <Compile Include="CustomControls\BaseCheckBox.cs" />
     <Compile Include="CustomControls\BaseImgButton.cs" />
     <Compile Include="CustomControls\BaseRichTextBox.cs" />
     <Compile Include="CustomControls\BaseTextBox.cs" />

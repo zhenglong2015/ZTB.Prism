@@ -3,6 +3,7 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="BaseColors.xaml" />
         <ResourceDictionary Source="IconStyle.xaml" />
+        <ResourceDictionary Source="CheckBoxStyle.xaml" />
         <ResourceDictionary Source="ButtonStyle.xaml" />
         <ResourceDictionary Source="TextBoxStyle.xaml" />
         <ResourceDictionary Source="MenuStyle.xaml" />

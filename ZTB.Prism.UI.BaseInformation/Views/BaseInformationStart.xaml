@@ -10,14 +10,33 @@
     xmlns:prism="http://prismlibrary.com/"
     prism:ViewModelLocator.AutoWireViewModel="True">
     <StackPanel>
-        <controls:BaseTextBox
+
+        <controls:BaseCheckBox Margin="3">男</controls:BaseCheckBox>
+        <controls:BaseCheckBox Margin="3">女</controls:BaseCheckBox>
+        <controls:BaseCheckBox Margin="3" IsChecked="{x:Null}">其他</controls:BaseCheckBox>
+        <controls:BaseCheckBox Margin="3" IsChecked="{x:Null}">女</controls:BaseCheckBox>
+        <controls:BaseCheckBox Margin="3" IsEnabled="False">我被禁用了</controls:BaseCheckBox>
+        <controls:BaseCheckBox
+            Margin="3"
+            IsChecked="{x:Null}"
+            IsEnabled="False">
+            我被禁用了
+        </controls:BaseCheckBox>
+        <controls:BaseCheckBox
+            Margin="3"
+            IsChecked="True"
+            IsEnabled="False">
+            我被禁用了
+        </controls:BaseCheckBox>
+
+        <!--<controls:BaseTextBox
             Width="180"
             Height="45"
             Margin="10"
             VerticalContentAlignment="Center"
             fjsx:ControlAttachProperty.Label="文件路径:"
             fjsx:ControlAttachProperty.Watermark="我是水印"
-            AppendIcon="&#xf01a;" />
+            AppendIcon="&#xf01a;" />-->
         <!--<controls:BaseRichTextBox Width="180" Height="50">
             <FlowDocument>
                 <Paragraph>
@@ -29,11 +48,11 @@
                 </Paragraph>
             </FlowDocument>
         </controls:BaseRichTextBox>-->
-        <PasswordBox
+        <!--<PasswordBox
             Width="80"
             Height="30"
             VerticalAlignment="Center"
             VerticalContentAlignment="Center"
-            fjsx:ControlAttachProperty.CornerRadius="10,10,10,10" />
+            fjsx:ControlAttachProperty.CornerRadius="10,10,10,10" />-->
     </StackPanel>
 </UserControl>
