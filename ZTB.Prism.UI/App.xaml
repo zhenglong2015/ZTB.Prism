@@ -4,6 +4,6 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:ZTB.Prism.UI">
     <Application.Resources>
-        <ResourceDictionary Source="pack://application:,,,/ZTB.Prism.Styles;component/Index.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/ZTB.Prism.Controls;component/Styles/Index.xaml" />
     </Application.Resources>
 </Application>

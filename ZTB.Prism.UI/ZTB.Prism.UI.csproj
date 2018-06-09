@@ -137,12 +137,8 @@
       <Name>ZTB.Prism.Infrastructure</Name>
     </ProjectReference>
     <ProjectReference Include="..\ZTB.Prism.Resources\ZTB.Prism.Resources.csproj">
-      <Project>{974ecabb-93a9-4c94-8607-eec5146c7ebb}</Project>
+      <Project>{624d89b1-3d47-4c5d-86d9-96a67c7819cf}</Project>
       <Name>ZTB.Prism.Resources</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ZTB.Prism.Styles\ZTB.Prism.Styles.csproj">
-      <Project>{017ec5db-25c0-4d82-b28d-362b7d07480e}</Project>
-      <Name>ZTB.Prism.Styles</Name>
     </ProjectReference>
     <ProjectReference Include="..\ZTB.Prism.UI.BaseInformation\ZTB.Prism.UI.BaseInformation.csproj">
       <Project>{4522f7c7-97ad-4de3-87ff-cc5dc87e7be8}</Project>
