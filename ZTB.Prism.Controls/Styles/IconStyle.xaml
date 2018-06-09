@@ -1,0 +1,6 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style x:Key="FontAwesome">
+        <Setter Property="TextElement.FontFamily" Value="pack://application:,,,/ZTB.Prism.Controls;component/Resources/fontawesome/#FontAwesome" />
+        <Setter Property="TextBlock.TextAlignment" Value="Center" />
+    </Style>
+</ResourceDictionary>
