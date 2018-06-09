@@ -11,7 +11,11 @@
     prism:ViewModelLocator.AutoWireViewModel="True">
     <WrapPanel>
 
-        <RadioButton Margin="3" Style="{StaticResource ImgRadioButtonStyle}">男</RadioButton>
+
+
+
+
+        <!--<RadioButton Margin="3" Style="{StaticResource ImgRadioButtonStyle}">男</RadioButton>
 
         <RadioButton Margin="1" Style="{StaticResource BoxRadioButton}">近3天</RadioButton>
         <RadioButton Margin="1" Style="{StaticResource BoxRadioButton}">近7天</RadioButton>
@@ -19,10 +23,10 @@
         <RadioButton Margin="1" Style="{StaticResource BoxRadioButton}">自定义</RadioButton>
         <RadioButton Margin="1" Style="{StaticResource BoxRadioButton}">2012.05.12-2015.12.14</RadioButton>
 
-        <controls:BaseRadioButton Margin="3" GroupName="sex">
+        <RadioButton Margin="3" GroupName="sex">
             男
-        </controls:BaseRadioButton>
-        <controls:BaseRadioButton Margin="3" GroupName="sex">女</controls:BaseRadioButton>
+        </RadioButton>
+        <RadioButton Margin="3" GroupName="sex">女</RadioButton>-->
         <!--<controls:BaseSwitch />
         <controls:BaseSwitch Text="不开窍" CheckedText="开启" IsChecked="True" />
         <controls:BaseSwitch Text="不开窍" CheckedText="开启" IsChecked="True" Height="24" Width="60" />

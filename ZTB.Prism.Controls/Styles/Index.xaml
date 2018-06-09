@@ -12,5 +12,7 @@
         <ResourceDictionary Source="WindowStyle.xaml" />
         <ResourceDictionary Source="SwitchStyle.xaml" />
         <ResourceDictionary Source="RadioButtonStyle.xaml" />
+        <ResourceDictionary Source="DatePickerStyle.xaml" />
+
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

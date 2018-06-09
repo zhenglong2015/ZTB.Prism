@@ -4,7 +4,7 @@
     xmlns:controls="clr-namespace:ZTB.Prism.Controls.CustomControls">
     <!--  ***************************DefaultRichTextBox***************************  -->
 
-    <Style TargetType="{x:Type controls:BaseRichTextBox}">
+    <Style TargetType="{x:Type RichTextBox}">
         <!--<Setter Property="ContextMenu" Value="{DynamicResource TextBoxContextMenu}" />-->
         <Setter Property="SelectionBrush" Value="{StaticResource TextSelectionBrush}" />
         <Setter Property="FontFamily" Value="{StaticResource FontFamily}" />

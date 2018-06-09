@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ZTB.Prism.Controls.CustomControls;
 using ZTB.Prism.UI.BaseInformation.ViewModels;
 
 namespace ZTB.Prism.UI.BaseInformation.Views
@@ -25,5 +26,6 @@ namespace ZTB.Prism.UI.BaseInformation.Views
         {
             InitializeComponent();
         }
+
     }
 }
