@@ -77,7 +77,7 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
-    <Style x:Key="DefautButtonStyle" TargetType="{x:Type controls:BaseButton}">
+    <Style TargetType="{x:Type controls:BaseButton}">
         <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}" />
         <Setter Property="Background" Value="{StaticResource Button.Static.Background}" />
         <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}" />
@@ -151,12 +151,5 @@
         </Setter>
     </Style>
     <!--  图片按钮结束  -->
-
-
-
-
-
-
-
 
 </ResourceDictionary>

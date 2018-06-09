@@ -9,9 +9,27 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:prism="http://prismlibrary.com/"
     prism:ViewModelLocator.AutoWireViewModel="True">
-    <StackPanel>
+    <WrapPanel>
 
-        <controls:BaseCheckBox Margin="3">男</controls:BaseCheckBox>
+        <RadioButton Margin="3" Style="{StaticResource ImgRadioButtonStyle}">男</RadioButton>
+
+        <RadioButton Margin="1" Style="{StaticResource BoxRadioButton}">近3天</RadioButton>
+        <RadioButton Margin="1" Style="{StaticResource BoxRadioButton}">近7天</RadioButton>
+        <RadioButton Margin="1" Style="{StaticResource BoxRadioButton}">本月</RadioButton>
+        <RadioButton Margin="1" Style="{StaticResource BoxRadioButton}">自定义</RadioButton>
+        <RadioButton Margin="1" Style="{StaticResource BoxRadioButton}">2012.05.12-2015.12.14</RadioButton>
+
+        <controls:BaseRadioButton Margin="3" GroupName="sex">
+            男
+        </controls:BaseRadioButton>
+        <controls:BaseRadioButton Margin="3" GroupName="sex">女</controls:BaseRadioButton>
+        <!--<controls:BaseSwitch />
+        <controls:BaseSwitch Text="不开窍" CheckedText="开启" IsChecked="True" />
+        <controls:BaseSwitch Text="不开窍" CheckedText="开启" IsChecked="True" Height="24" Width="60" />
+        <controls:BaseSwitch Height="24" Width="60"/>-->
+
+
+        <!--<controls:BaseCheckBox Margin="3">男</controls:BaseCheckBox>
         <controls:BaseCheckBox Margin="3">女</controls:BaseCheckBox>
         <controls:BaseCheckBox Margin="3" IsChecked="{x:Null}">其他</controls:BaseCheckBox>
         <controls:BaseCheckBox Margin="3" IsChecked="{x:Null}">女</controls:BaseCheckBox>
@@ -27,7 +45,7 @@
             IsChecked="True"
             IsEnabled="False">
             我被禁用了
-        </controls:BaseCheckBox>
+        </controls:BaseCheckBox>-->
 
         <!--<controls:BaseTextBox
             Width="180"
@@ -54,5 +72,5 @@
             VerticalAlignment="Center"
             VerticalContentAlignment="Center"
             fjsx:ControlAttachProperty.CornerRadius="10,10,10,10" />-->
-    </StackPanel>
+    </WrapPanel>
 </UserControl>

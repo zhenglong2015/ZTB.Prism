@@ -13,7 +13,7 @@
         ShadowDepth="2"
         Color="Black" />
     <!--  输入组件  -->
-    <SolidColorBrush x:Key="TextForeground" Color="White" />
+    <SolidColorBrush x:Key="TextForeground" Color="Black" />
     <SolidColorBrush x:Key="TextBackground" Color="#0D234B" />
     <SolidColorBrush x:Key="TextSelectionBrush" Color="#8F8787" />
     <!--  TextBox默认Label颜色  -->

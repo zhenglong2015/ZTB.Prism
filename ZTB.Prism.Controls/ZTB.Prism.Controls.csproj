@@ -61,7 +61,9 @@
     <Compile Include="CustomControls\BaseButton.cs" />
     <Compile Include="CustomControls\BaseCheckBox.cs" />
     <Compile Include="CustomControls\BaseImgButton.cs" />
+    <Compile Include="CustomControls\BaseRadioButton.cs" />
     <Compile Include="CustomControls\BaseRichTextBox.cs" />
+    <Compile Include="CustomControls\BaseSwitch.cs" />
     <Compile Include="CustomControls\BaseTextBox.cs" />
     <Compile Include="CustomControls\BaseWindow.cs" />
     <Compile Include="Helpers\ControlAttachProperty.cs" />
@@ -96,9 +98,7 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Resource Include="Resources\fontawesome\fontawesome-webfont.ttf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
+    <Resource Include="Resources\iconfont.ttf" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="Styles\BaseColors.xaml">
@@ -129,9 +129,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Styles\RadioButtonStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Styles\RichTextBoxStyle.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\SwitchStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Styles\TextBoxStyle.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -159,6 +167,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Libs\System.Windows.Interactivity.dll" />
+    <Resource Include="Resources\radioButtonNormal.png" />
+    <Resource Include="Resources\radioButtonChecked.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

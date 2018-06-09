@@ -10,5 +10,7 @@
         <ResourceDictionary Source="PasswordStyle.xaml" />
         <ResourceDictionary Source="RichTextBoxStyle.xaml" />
         <ResourceDictionary Source="WindowStyle.xaml" />
+        <ResourceDictionary Source="SwitchStyle.xaml" />
+        <ResourceDictionary Source="RadioButtonStyle.xaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
