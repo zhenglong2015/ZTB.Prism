@@ -8,8 +8,15 @@
     xmlns:local="clr-namespace:ZTB.Prism.UI.BaseInformation.Views"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:prism="http://prismlibrary.com/"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
     prism:ViewModelLocator.AutoWireViewModel="True">
     <WrapPanel>
+        <DatePicker
+            Margin="3"
+            fjsx:ControlAttachProperty.Label="出生日期"
+            fjsx:ControlAttachProperty.Watermark="妈的快输入日期"
+            Style="{StaticResource DefaultDatePicker}" />
+
 
 
 

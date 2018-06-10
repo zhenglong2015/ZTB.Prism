@@ -63,7 +63,6 @@
     <Compile Include="CustomControls\BaseSwitch.cs" />
     <Compile Include="CustomControls\BaseTextBox.cs" />
     <Compile Include="CustomControls\BaseWindow.cs" />
-    <Compile Include="CustomControls\TimeSpanPicker.cs" />
     <Compile Include="Helpers\ControlAttachProperty.cs" />
     <Compile Include="Helpers\ShowMesHelper.cs" />
     <Compile Include="Views\ConfirmationWindow.xaml.cs">
@@ -146,10 +145,6 @@
     <Page Include="Styles\TextBoxStyle.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Styles\TimeSpanPicker.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Styles\WindowStyle.xaml">
       <Generator>MSBuild:Compile</Generator>
